@@ -46,19 +46,19 @@ const Textarea = styled.textarea`
 `;
 
 const Button = styled.button`
-background-color: #433751;
-color: white;
-font-weight: 300;
-font-size: 20px;
-padding: 10px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+  background-color: #433751;
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 
-&:hover {
-  background-color: lightGray;
-  color: black;
-}
+  &:hover {
+    background-color: lightGray;
+    color: black;
+  }
 `;
 
 const Right = styled.div`
@@ -74,7 +74,7 @@ const Contact = () => {
             <Title>Get In Touch With Me</Title>
             <Input placeholder="Name" />
             <Input placeholder="Email" />
-            <Textarea placeholder="Write you message here" rows={10}/>
+            <Textarea placeholder="Write you message here" rows={10} />
             <Button>Send</Button>
           </Form>
         </Left>
