@@ -95,6 +95,7 @@ const Img = styled.img`
 const Hero = () => {
   return (
     <Section>
+      <Navbar />
       <Container>
         <Left>
           <Title>Nawaz A.Rahman</Title>

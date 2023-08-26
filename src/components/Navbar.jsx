@@ -13,7 +13,6 @@ const Container = styled.div`
   align-items: center;
   padding: 10px, 0px;
   padding-top: 15px;
-  position: fixed;
 `;
 
 const Links = styled.div`
