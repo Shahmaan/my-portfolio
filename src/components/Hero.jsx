@@ -36,7 +36,7 @@ const Subtitle = styled.h4`
 
 const Desc = styled.p`
   color: lightgray;
-`
+`;
 
 const TagLine = styled.div`
   display: flex;
@@ -81,7 +81,7 @@ const Img = styled.img`
   animation: animate 2s infinite ease alternate;
 
   @keyframes animate {
-    to{
+    to {
       transform: translateY(20px);
     }
   }
@@ -90,17 +90,17 @@ const Img = styled.img`
 const Hero = () => {
   return (
     <Section>
-      <Navbar />
       <Container>
         <Left>
           <Title>Nawaz A.Rahman</Title>
           <Subtitle>Data Scientsit & Analyst</Subtitle>
-          <Desc>Welcome to my corner of the data-driven universe! 
-            I'm a passionate and curious data scientist on a mission 
-            to unravel the stories hidden within the numbers. 
-            Armed with a deep love for problem-solving and an 
-            insatiable curiosity, I embarked on this exhilarating 
-            journey into the world of data science.</Desc>
+          <Desc>
+            Welcome to my corner of the data-driven universe! I'm a passionate
+            and curious data scientist on a mission to unravel the stories
+            hidden within the numbers. Armed with a deep love for
+            problem-solving and an insatiable curiosity, I embarked on this
+            exhilarating journey into the world of data science.
+          </Desc>
           <TagLine>
             <Line src="./img/line.png" />
             <Quote>Where Data Meets Discovery</Quote>

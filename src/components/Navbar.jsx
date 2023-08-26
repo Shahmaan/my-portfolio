@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
   padding: 10px, 0px;
   padding-top: 15px;
-  /* position: fixed; */
+  position: fixed;
 `;
 
 const Links = styled.div`
@@ -35,12 +35,11 @@ const List = styled.ul`
 const ListItem = styled.li`
   cursor: pointer;
   transition: color 0.1s ease; /* Adding a smooth transition effect */
-  
+
   &:hover {
-    color: lightGray; 
+    color: lightGray;
   }
 `;
-
 
 const Button = styled.button`
   width: 100px;

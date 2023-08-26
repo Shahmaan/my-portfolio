@@ -22,7 +22,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Who />
       <Projects />
