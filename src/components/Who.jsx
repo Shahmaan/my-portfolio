@@ -40,22 +40,6 @@ const Desc = styled.p`
   color: lightgray;
 `;
 
-
-const TagLine = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 2px;
-  width: 15px;
-`;
-
-const Quote = styled.p`
-  color: #ff0000;
-`;
-
 const Button = styled.button`
   background-color: #433751;
   color: white;
@@ -118,11 +102,6 @@ const Who = () => {
             turns raw data into a symphony of insights, curiosity into clarity,
             and numbers into narratives.
           </Desc>
-
-          <TagLine>
-            <Line src="./img/line.png" />
-            <Quote>Where Data Meets Discovery</Quote>
-          </TagLine>
           <Button>Learn More</Button>
         </Right>
       </Container>
