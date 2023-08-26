@@ -49,6 +49,11 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background-color: lightGray;
+    color: black;
+  }
 `;
 
 const Who = () => {
