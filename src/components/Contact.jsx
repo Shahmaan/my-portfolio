@@ -1,5 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useState } from 'react';
 
 const Section = styled.div`
   height: 100vh;
@@ -65,21 +68,44 @@ const Right = styled.div`
   flex: 1;
 `;
 
-const handleSubmit = e=> {
-  e.preventDefault()
-}
-
 const Contact = () => {
+  const ref = useRef();
+  const [succsess, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hpr7b8o",
+        "template_irovmwv",
+        ref.current,
+        "Zg6il4RIHKU7D4MCd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+  };
+
   return (
     <Section>
       <Container>
         <Left>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Get In Touch With Me</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <Textarea placeholder="Message" rows={10} />
+            <Input placeholder="Name" name="name" />
+            <Input placeholder="Email" name="email" />
+            <Textarea placeholder="Message" name="message" rows={10} />
             <Button type="submit">Send</Button>
+            {succsess &&
+              "Your message has been sent. I'll get back to you soon :)"}
           </Form>
         </Left>
         <Right></Right>
