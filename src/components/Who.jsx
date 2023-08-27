@@ -30,6 +30,7 @@ const Right = styled.div`
 
 const Title = styled.h1`
   font-size: 70px;
+  font-weight: 400;
 `;
 
 const Subtitle = styled.h4`
