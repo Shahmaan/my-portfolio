@@ -74,7 +74,7 @@ const Contact = () => {
             <Title>Get In Touch With Me</Title>
             <Input placeholder="Name" />
             <Input placeholder="Email" />
-            <Textarea placeholder="Write you message here" rows={10} />
+            <Textarea placeholder="Message" rows={10} />
             <Button>Send</Button>
           </Form>
         </Left>
