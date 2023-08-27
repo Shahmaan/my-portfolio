@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Who from "./components/Who";
 import ExperienceEducation from "./components/ExperienceEducation";
-import Test from "./components/Test";
 
 const Container = styled.div`
   height: 100vh;
@@ -29,7 +28,6 @@ function App() {
       <Projects />
       <ExperienceEducation />
       <Contact />
-      <Test />
     </Container>
   );
 }
