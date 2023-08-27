@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import Navbar from "./Navbar";
-import { Typewriter } from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Section = styled.div`
   height: 100vh;
@@ -29,10 +29,12 @@ const Left = styled.div`
 `;
 const Title = styled.h1`
   font-size: 70px;
+  font-weight: 400;
 `;
 
 const Subtitle = styled.h4`
   font-size: 30px;
+  font-weight: 200;
 `;
 
 const Desc = styled.p`
@@ -51,7 +53,8 @@ const Line = styled.img`
 `;
 
 const Quote = styled.p`
-  color: #ff0000;
+  color: lightgray;
+  font-weight: 100;
 `;
 
 const Button = styled.button`
@@ -94,13 +97,25 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: ["Data Scientsit", "Data Analyst", "Developer"],
+    loop: false,
+    onLoopDone: () => console.log(`loop completed after 3 runs.`),
+  });
+
   return (
     <Section>
       <Navbar />
       <Container>
         <Left>
           <Title>Nawaz A.Rahman</Title>
-          <Subtitle>Data Scientsit & Analyst</Subtitle>
+          <Subtitle>
+            I'm a{" "}
+            <span style={{ color: 'red', fontWeight: 500}}>
+              {text}
+              <Cursor cursorColor="red" />
+            </span>
+          </Subtitle>
           <Desc>
             Welcome to my corner of the data-driven universe! I'm a passionate
             and curious data scientist on a mission to unravel the stories
