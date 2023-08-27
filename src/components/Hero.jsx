@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import Navbar from "./Navbar";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Section = styled.div`
   height: 100vh;
