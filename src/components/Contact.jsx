@@ -2,7 +2,10 @@ import React from "react";
 import { styled } from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useState } from 'react';
+import { useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Stage } from "@react-three/drei";
+import Helmet from "./Helmet";
 
 const Section = styled.div`
   height: 100vh;
@@ -108,7 +111,14 @@ const Contact = () => {
               "Your message has been sent. I'll get back to you soon :)"}
           </Form>
         </Left>
-        <Right></Right>
+        <Right>
+          <Canvas>
+            <Stage environment={"night"} intensity={2}>
+              <Helmet />
+            </Stage>
+            <OrbitControls enableZoom={false} autoRotate/>
+          </Canvas>
+        </Right>
       </Container>
     </Section>
   );
