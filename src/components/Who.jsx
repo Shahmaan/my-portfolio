@@ -1,8 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import Cube from "./Cube";
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import SpaceHelmetCanvas from "./Canvas/SpaceHelmetCanvas";
 
 const Section = styled.div`
   height: 100vh;
@@ -21,6 +19,9 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  
 `;
 
 const Right = styled.div`
@@ -65,12 +66,7 @@ const Who = () => {
     <Section>
       <Container>
         <Left>
-          <Canvas camera={{fov:25, position: [5,5,5]}}>
-            <OrbitControls enableZoom={false} autoRotate/>
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Cube />
-          </Canvas>
+          <SpaceHelmetCanvas />
         </Left>
         <Right>
           <Title>Who Am I?</Title>
