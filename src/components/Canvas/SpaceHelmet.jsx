@@ -3,7 +3,7 @@ import { useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const SpaceHelmet = () => {
-  const gltf = useLoader(GLTFLoader, "./public/helmet/scene.gltf");
+  const gltf = useLoader(GLTFLoader, "./helmet/scene.gltf");
   const modelRef = useRef();
 
   useFrame(() => {
