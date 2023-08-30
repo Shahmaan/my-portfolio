@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import CubeCanvas from "./Canvas/CubeCanvas";
 
 
 const Section = styled.div`
@@ -109,7 +110,10 @@ const Contact = () => {
               "Your message has been sent. I'll get back to you soon :)"}
           </Form>
         </Left>
-        <Right></Right>
+        <Right>
+          {/* insert 3d object here */}
+          <CubeCanvas />
+        </Right>
       </Container>
     </Section>
   );
